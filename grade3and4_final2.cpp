@@ -1,14 +1,9 @@
-#include<stdio.h>
-#include<bits/stdc++.h>
-#include <time.h>
-#include <unistd.h>
-using namespace std;
 int grade3_4()
 {
 	int number;  //number为题目数目 
 	srand(time(NULL));
 	float result,ans;
-	int op;
+	int op,result1;
 	cin>>number;
 		for(int i=0;i<number;i++){
 		int ele_num=rand()%2+2;         //ele_num为该题元素个数
@@ -39,7 +34,7 @@ int grade3_4()
 		    case 3:
 			    cout<<a<<"/"<<b<<"="<<endl;
 			    result=a/b;
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 				cin>>ans;
 			    if(ans!=result)flag++;
@@ -74,7 +69,7 @@ int grade3_4()
 			case 4:
 			    cout<<a<<"+"<<b<<"/"<<c<<"="<<endl;
 			    result=a+(double)b/(double)c;
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 			    cin>>ans;
 			    if(ans!=result)flag++;                //+
@@ -100,7 +95,7 @@ int grade3_4()
 	    	case 8:
 			    cout<<a<<"-"<<b<<"/"<<c<<"="<<endl;
 			    result=a-(double)b/(double)c;
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 			    cin>>ans;
 			    if(ans!=result)flag++;
@@ -132,7 +127,7 @@ int grade3_4()
 	    	case 13:
 			    cout<<"("<<a<<"+"<<b<<")"<<"/"<<c<<"="<<endl;
 			    result=((double)a+(double)b)/(double)c;
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 			    cin>>ans;
 			    if(ans!=result)flag++;
@@ -158,7 +153,7 @@ int grade3_4()
 		    case 17:
 			    cout<<a<<"/"<<"("<<b<<"+"<<c<<")"<<"="<<endl;  
 			    result=(double)a/((double)b+(double)c);
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 			    cin>>ans;
 			    if(ans!=result)flag++;
@@ -166,7 +161,7 @@ int grade3_4()
 		    case 18:
 			    cout<<a<<"/"<<"("<<b<<"-"<<c<<")"<<"="<<endl;  
 			    result=(double)a/((double)b-(double)c);
-			    int result1=(int)(result*100+0.5);
+			    result1=(int)(result*100+0.5);
 			    result=result1/100.0;
 			    cin>>ans;
 			    if(ans!=result)flag++;
@@ -190,4 +185,3 @@ int grade3_4()
    return flag;
    
 }
-   
